@@ -29,6 +29,8 @@ public class MovementLukas : MonoBehaviour
     //Plane that represents imaginary floor that will be used to calculate Aim target position
     Plane surfacePlane = new Plane();
 
+    public WeaponLukas weaponLukas;
+
     void Awake()
     {
         r = GetComponent<Rigidbody>();
@@ -43,6 +45,14 @@ public class MovementLukas : MonoBehaviour
 
         //Hide the cursor
         Cursor.visible = false;
+    }
+
+    private void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            weaponLukas.Fire();
+        }
     }
 
     void FixedUpdate()
@@ -85,6 +95,7 @@ public class MovementLukas : MonoBehaviour
             {
                 r.velocity = new Vector3(velocity.x, CalculateJumpVerticalSpeed(), velocity.z);
             }
+
         }
 
         // We apply gravity manually for more tuning control
@@ -109,6 +120,10 @@ public class MovementLukas : MonoBehaviour
         transform.LookAt(new Vector3(targetObject.transform.position.x, transform.position.y, targetObject.transform.position.z));
     }
 
+    public void LateUpdate()
+    {
+        
+    }
     Vector3 GetAimTargetPos()
     {
         //Update surface plane
