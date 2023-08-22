@@ -8,10 +8,9 @@ public class WeaponLukas : MonoBehaviour
     public Transform firePoint;
     public float fireForce = 20f;
 
-    public void Fire()
+    public virtual void Fire()
     {
-        GameObject bullet = Instantiate(bulletPrefab,firePoint.position,firePoint.rotation);
-        bullet.GetComponent<Rigidbody>().AddForce(firePoint.forward*fireForce,ForceMode.Impulse);
-
+        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        bullet.GetComponent<Rigidbody>().AddForce(firePoint.forward * fireForce, ForceMode.Impulse);
     }
 }

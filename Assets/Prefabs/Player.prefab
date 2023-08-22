@@ -95,8 +95,9 @@ GameObject:
   - component: {fileID: 90334369448318578}
   - component: {fileID: 90334369448318580}
   - component: {fileID: 90334369448318579}
-  - component: {fileID: 1101801690134804444}
+  - component: {fileID: 90334367874207730}
   - component: {fileID: 3159941979925772568}
+  - component: {fileID: 90334367874207736}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -145,7 +146,7 @@ MonoBehaviour:
   maxVelocityChange: 10
   canJump: 1
   jumpHeight: 1
-  weaponLukas: {fileID: 2729611668544443733}
+  weaponLukas: {fileID: 0}
 --- !u!54 &90334369448318580
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -176,7 +177,7 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1101801690134804444
+--- !u!114 &90334367874207730
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -185,11 +186,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 90334369448318606}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dde84d58ad3eeb44afc62edd9572841, type: 3}
+  m_Script: {fileID: 11500000, guid: 63e134bf226f9664cadfa08af069e8aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
-  currentHealth: 100
 --- !u!114 &3159941979925772568
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -204,6 +203,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slider: {fileID: 2875100003551950883}
   target: {fileID: 90334369448318606}
+--- !u!114 &90334367874207736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 90334369448318606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 439f62b84046a594d826077fa99f6b3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  currentHealth: 100
 --- !u!1 &90334369941687807
 GameObject:
   m_ObjectHideFlags: 0
@@ -794,7 +807,7 @@ GameObject:
   - component: {fileID: 8736392399175611598}
   - component: {fileID: 8792040454863815476}
   - component: {fileID: 3826547734269185034}
-  - component: {fileID: 2729611668544443733}
+  - component: {fileID: 1877749737}
   m_Layer: 0
   m_Name: Weapon
   m_TagString: Player
@@ -881,7 +894,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2729611668544443733
+--- !u!114 &1877749737
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -890,7 +903,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7241666917891347058}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e31485757330f19479f821b65a957cd4, type: 3}
+  m_Script: {fileID: 11500000, guid: dabe1fab5ba6a0f48a62922c9f8dfd9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 5488613171739913638, guid: a0199791b9de7bf4c85a5d21ffb1631f, type: 3}
