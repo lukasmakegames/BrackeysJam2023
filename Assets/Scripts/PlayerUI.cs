@@ -5,6 +5,7 @@ public class PlayerUI : MonoBehaviour
 {
     public TextMeshProUGUI playerHP;
     public TextMeshProUGUI playerScore;
+    public TextMeshProUGUI playerGlobalScore;
     public TextMeshProUGUI playerBullets;
 
     private Player _player;
@@ -17,8 +18,9 @@ public class PlayerUI : MonoBehaviour
     private void UpdateUI()
     {
         playerHP.text = _player.HP.ToString();
-        playerScore.text = _player.Score.ToString();
+        playerScore.text = Player.ScoreOfLevel.ToString();
         playerBullets.text = _player.Bullets.ToString();
+        playerGlobalScore.text = Player.GlobalScore.ToString();
     }
 
     void Start()
@@ -26,7 +28,8 @@ public class PlayerUI : MonoBehaviour
         _player = FindObjectOfType<Player>();
 
         playerHP.text = _player.HP.ToString();
-        playerScore.text = _player.Score.ToString();
+        playerScore.text = Player.ScoreOfLevel.ToString();
         playerBullets.text = _player.Bullets.ToString();
+        playerGlobalScore.text = Player.GlobalScore.ToString();
     }
 }

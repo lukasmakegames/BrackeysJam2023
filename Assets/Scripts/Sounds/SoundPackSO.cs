@@ -6,4 +6,6 @@ public class SoundPackSO : ScriptableObject
     public AudioClip playerGetDamageSound;
     public AudioClip onClick;
     public AudioClip cursorOnButton;
+    public AudioClip playerShot;
+    public AudioClip enemyShot;
 }
