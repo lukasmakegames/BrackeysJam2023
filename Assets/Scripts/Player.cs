@@ -2,11 +2,11 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    private int _HP;
+    private float _HP;
     private int _bullets;
     private int _score;
 
-    public int HP => _HP;
+    public float HP => _HP;
     public int Bullets => _bullets;
     public int Score => _score;
 
@@ -17,9 +17,13 @@ public class Player : MonoBehaviour
         EventAgregator.updateScore.AddListener(UpdateScore);
     }
 
-    private void UpdateHP()
+    public void SetStartHP(float hp)
     {
-        _HP--;
+        _HP = hp;
+    }
+    private void UpdateHP(float amount)
+    {
+        _HP -= amount;
         EventAgregator.updateUI.Invoke();
     }
 
@@ -31,7 +35,7 @@ public class Player : MonoBehaviour
 
     private void UpdateScore(int score)
     {
-        _score+=score;
+        _score += score;
         EventAgregator.updateUI.Invoke();
     }
 
@@ -44,6 +48,10 @@ public class Player : MonoBehaviour
     public void AddHP(int hp)
     {
         _HP += hp;
+        if (_HP > 100)
+        {
+            _HP = 100;
+        }
         EventAgregator.updateUI.Invoke();
     }
 

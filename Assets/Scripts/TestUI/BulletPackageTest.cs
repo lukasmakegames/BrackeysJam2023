@@ -19,6 +19,7 @@ public class BulletPackageTest : MonoBehaviour
         {
             _player.AddBullets(bulletCount);
             _player.AddScore(score);
+            EventAgregator.updateBullet.Invoke();
             Destroy(this.gameObject);
         }
     }

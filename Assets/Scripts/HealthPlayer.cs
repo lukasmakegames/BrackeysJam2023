@@ -1,20 +1,22 @@
 using UnityEngine;
 
-public class Health : MonoBehaviour
+public class HealthPlayer : Health
 {
-    public float maxHealth = 100f;
-    public float currentHealth;
+    private Player _player;
 
     private void Start()
     {
+        _player = GetComponent<Player>();
         currentHealth = maxHealth;
+        _player.SetStartHP(currentHealth);
     }
 
-    public virtual void TakeDamage(float damageAmount)
+    public override void TakeDamage(float damageAmount)
     {
         currentHealth -= damageAmount;
         currentHealth = Mathf.Clamp(currentHealth, 0f, maxHealth);
 
+        EventAgregator.playerLostHP.Invoke(damageAmount);
         // Update the health bar UI
         HealthBar healthBar = GetComponentInChildren<HealthBar>();
         if (healthBar != null)
