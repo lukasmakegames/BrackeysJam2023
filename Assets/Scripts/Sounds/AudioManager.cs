@@ -88,6 +88,16 @@ public class AudioManager : MonoBehaviour
         PlaySound(soundPackSO.playerGetDamageSound, transform, soundVolume);
     }
 
+    public void PlayerShot(Vector2 transform)
+    {
+        PlaySound(soundPackSO.playerShot, transform, soundVolume);
+    }
+
+    public void EnemyShot(Vector2 transform)
+    {
+        PlaySound(soundPackSO.enemyShot, transform, soundVolume);
+    }
+
     public void PlayOnClick()
     {
         PlaySound(soundPackSO.onClick, this.transform.position, soundVolume);

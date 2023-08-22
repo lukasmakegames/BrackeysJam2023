@@ -12,7 +12,6 @@ public class BulletPackageTest : MonoBehaviour
         _player = FindObjectOfType<Player>();
     }
 
-
     private void OnTriggerEnter(Collider collision)
     {
         if (collision.CompareTag("Player"))

@@ -15,3 +15,5 @@ MonoBehaviour:
   playerGetDamageSound: {fileID: 0}
   onClick: {fileID: 8300000, guid: 40f550774f67439469f81b75537dc3a6, type: 3}
   cursorOnButton: {fileID: 8300000, guid: 40f550774f67439469f81b75537dc3a6, type: 3}
+  playerShot: {fileID: 8300000, guid: 48480240491160b45af0bea351d48a41, type: 3}
+  enemyShot: {fileID: 8300000, guid: e6b5db303d984404ea6a848982280d10, type: 3}
