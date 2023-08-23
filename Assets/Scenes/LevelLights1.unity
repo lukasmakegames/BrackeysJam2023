@@ -14,7 +14,7 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 1
+  m_Fog: 0
   m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.01
@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 0}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: efc4064c8395f2e4c8d02fe3fe551054, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -7898,6 +7898,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHP: {fileID: 435785857}
   playerScore: {fileID: 576310054}
+  playerGlobalScore: {fileID: 0}
   playerBullets: {fileID: 1833764331}
 --- !u!1001 &901106359
 PrefabInstance:
@@ -12360,7 +12361,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!108 &1366654439
 Light:
   m_ObjectHideFlags: 0
@@ -17667,6 +17668,10 @@ PrefabInstance:
     - target: {fileID: 90334369448318607, guid: 5f051ffa1b0926147bb4a2281ff99e99, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1193610703829561767, guid: 5f051ffa1b0926147bb4a2281ff99e99, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1936782747853533230, guid: 5f051ffa1b0926147bb4a2281ff99e99, type: 3}
       propertyPath: m_AnchorMax.y
