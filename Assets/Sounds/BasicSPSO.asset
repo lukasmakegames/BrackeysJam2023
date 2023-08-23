@@ -12,8 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27d2e2b2940a3ff4d923662b6a260a4c, type: 3}
   m_Name: BasicSPSO
   m_EditorClassIdentifier: 
-  playerGetDamageSound: {fileID: 0}
+  playerGetDamageSound: {fileID: 8300000, guid: 9f264b7c2f049d34fbb7e35b5517d08d, type: 3}
   onClick: {fileID: 8300000, guid: 40f550774f67439469f81b75537dc3a6, type: 3}
   cursorOnButton: {fileID: 8300000, guid: 40f550774f67439469f81b75537dc3a6, type: 3}
-  playerShot: {fileID: 8300000, guid: 48480240491160b45af0bea351d48a41, type: 3}
+  playerShot: {fileID: 8300000, guid: 980950c07198c3148855b3ac690ba26a, type: 3}
   enemyShot: {fileID: 8300000, guid: e6b5db303d984404ea6a848982280d10, type: 3}
+  playerAddHP: {fileID: 8300000, guid: 57c2feeebb569a94d874b4fe76fa4eff, type: 3}
+  playerAddAmmo: {fileID: 8300000, guid: 57c2feeebb569a94d874b4fe76fa4eff, type: 3}
+  playerDead: {fileID: 8300000, guid: 9f264b7c2f049d34fbb7e35b5517d08d, type: 3}
+  enemyDead: {fileID: 8300000, guid: 9f264b7c2f049d34fbb7e35b5517d08d, type: 3}

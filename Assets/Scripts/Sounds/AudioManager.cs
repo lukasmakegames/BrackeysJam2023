@@ -88,6 +88,16 @@ public class AudioManager : MonoBehaviour
         PlaySound(soundPackSO.playerGetDamageSound, transform, soundVolume);
     }
 
+    public void PlayerAddHP(Vector2 transform)
+    {
+        PlaySound(soundPackSO.playerAddHP, transform, soundVolume);
+    }
+
+    public void PlayerAddBullets(Vector2 transform)
+    {
+        PlaySound(soundPackSO.playerAddAmmo, transform, soundVolume);
+    }
+
     public void PlayerShot(Vector2 transform)
     {
         PlaySound(soundPackSO.playerShot, transform, soundVolume);
@@ -106,5 +116,15 @@ public class AudioManager : MonoBehaviour
     public void PlayCursorOnButton()
     {
         PlaySound(soundPackSO.cursorOnButton, this.transform.position, soundVolume);
+    }
+
+    public void PlayerDead(Vector2 transform)
+    {
+        PlaySound(soundPackSO.playerDead, transform, soundVolume);
+    }
+
+    public void EnemyDead(Vector2 transform)
+    {
+        PlaySound(soundPackSO.enemyDead, transform, soundVolume);
     }
 }

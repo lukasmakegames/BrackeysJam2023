@@ -24,6 +24,7 @@ public class Health : MonoBehaviour
 
         if (currentHealth <= 0f)
         {
+            AudioManager.Instance.EnemyDead(transform.position);
             Die();
         }
     }
