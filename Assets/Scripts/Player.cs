@@ -16,19 +16,20 @@ public class Player : MonoBehaviour
 
     private void Awake()
     {
+        _HP = 100;
         _scoreOfLevel = 0;
         EventAgregator.playerLostHP.AddListener(UpdateHP);
         EventAgregator.playerDoShot.AddListener(ShotBullet);
         EventAgregator.updateScore.AddListener(UpdateScore);
         EventAgregator.playerEndLevel.AddListener(SaveScore);
+        LoadGlobalScore();
     }
 
-    public static void ClearGlobalScore() // This method need add when startGame
+    private void LoadGlobalScore()
     {
-        _globalScore = 0;
-        PlayerPrefs.SetInt("scoreGlobalKey", _globalScore);
-    }
+        _globalScore = PlayerPrefs.GetInt(scoreGlobalKey);
 
+    }
     private void SaveScore()
     {
         _globalScore += _scoreOfLevel;
@@ -39,9 +40,16 @@ public class Player : MonoBehaviour
     {
         _HP = hp;
     }
+
     private void UpdateHP(float amount)
     {
         _HP -= amount;
+        if (_HP <= 0)
+        {
+            EventAgregator.playerDead.Invoke();
+            AudioManager.Instance.PlayerDead(transform.position);
+        }
+        AudioManager.Instance.PlayPlayerGetDamage(transform.position);
         EventAgregator.updateUI.Invoke();
     }
 
@@ -61,6 +69,7 @@ public class Player : MonoBehaviour
     public void AddBullets(int bulets)
     {
         _bullets += bulets;
+        AudioManager.Instance.PlayerAddBullets(transform.position);
         EventAgregator.updateUI.Invoke();
     }
 
@@ -71,6 +80,7 @@ public class Player : MonoBehaviour
         {
             _HP = 100;
         }
+        AudioManager.Instance.PlayerAddHP(transform.position);
         EventAgregator.updateUI.Invoke();
     }
 
