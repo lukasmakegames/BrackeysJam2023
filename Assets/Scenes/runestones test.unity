@@ -10273,7 +10273,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6620288307447046863, guid: d09cac3ab1adfa34faa1129dc0821262, type: 3}
       propertyPath: dialogue.name
-      value: runestone 1
+      value: jones
       objectReference: {fileID: 0}
     - target: {fileID: 6620288307447046863, guid: d09cac3ab1adfa34faa1129dc0821262, type: 3}
       propertyPath: dialogue.sentences.Array.size
