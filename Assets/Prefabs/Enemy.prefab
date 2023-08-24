@@ -557,8 +557,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   canShot: 1
-  distanceFollow: 7
-  distanceShot: 5
+  distanceFollow: 10
+  distanceShot: 7
   shotTimer: 1
   weapon: {fileID: 655512773693962240}
 --- !u!114 &3617096563278183883
