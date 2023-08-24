@@ -12,6 +12,9 @@ public class DialogueManager : MonoBehaviour
 
     private Queue<string> sentences;
 
+    [HideInInspector]
+    public bool ended = false;
+
     void Start()
     {
         sentences = new Queue<string>();
@@ -19,6 +22,8 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue)
     {
+        if(ended)
+            return;
         animator.SetBool("IsOpen", true);
 
         nameText.text = dialogue.name;
@@ -59,5 +64,7 @@ public class DialogueManager : MonoBehaviour
     void EndDialogue()
     {
         animator.SetBool("IsOpen", false);
+        ended = true;
+
     }
 }
