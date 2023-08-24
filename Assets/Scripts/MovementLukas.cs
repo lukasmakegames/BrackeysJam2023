@@ -31,6 +31,8 @@ public class MovementLukas : MonoBehaviour
 
     public WeaponLukas weaponLukas;
 
+    public Animator animator;
+
     void Awake()
     {
         r = GetComponent<Rigidbody>();
@@ -51,7 +53,15 @@ public class MovementLukas : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            weaponLukas.Fire();
+            weaponLukas.Fire(new Vector2(targetObject.transform.position.x, targetObject.transform.position.z));
+        }
+        if (r.velocity.magnitude > 0.1f)
+        {
+            animator.SetBool("isRunning", true);
+        }
+        else
+        {
+            animator.SetBool("isRunning", false);
         }
     }
 
@@ -118,6 +128,9 @@ public class MovementLukas : MonoBehaviour
 
         //Player rotation
         transform.LookAt(new Vector3(targetObject.transform.position.x, transform.position.y, targetObject.transform.position.z));
+
+
+    
     }
 
     public void LateUpdate()

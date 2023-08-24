@@ -41,7 +41,7 @@ public class AimingAI : MonoBehaviour
 
                 if (timer >= shotTimer)
                 {
-                    weapon.Fire();
+                    weapon.Fire(new Vector2(target.position.x,target.position.z));
                     AudioManager.Instance.EnemyShot(transform.position);
                     timer = 0;
                 }

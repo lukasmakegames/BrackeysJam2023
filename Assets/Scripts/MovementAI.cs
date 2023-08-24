@@ -10,6 +10,9 @@ public class MovementAI : MonoBehaviour
 
     NavMeshAgent myNavAgent;
     private float timer;
+    
+    public Animator animator;
+
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +30,14 @@ public class MovementAI : MonoBehaviour
             Vector3 newPos = RandomNavSphere(transform.position, wanderRadius, -1);
             myNavAgent.SetDestination(newPos);
             timer = 0;
+        }
+        if (myNavAgent.velocity.magnitude > 0.1f)
+        {
+            animator.SetBool("isRunning", true);
+        }
+        else
+        {
+            animator.SetBool("isRunning", false);
         }
     }
     public static Vector3 RandomNavSphere(Vector3 origin, float dist, int layermask)

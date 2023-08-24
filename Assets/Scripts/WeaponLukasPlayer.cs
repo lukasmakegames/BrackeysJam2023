@@ -20,7 +20,7 @@ public class WeaponLukasPlayer : WeaponLukas
         countBullets = _player.Bullets;
     }
 
-    public override void Fire()
+    public override void Fire(Vector2 cursorPosition)
     {
         if (countBullets > 0)
         {
@@ -28,7 +28,7 @@ public class WeaponLukasPlayer : WeaponLukas
             countBullets = _player.Bullets;
 
             GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-            bullet.GetComponent<Rigidbody>().AddForce(firePoint.forward * fireForce, ForceMode.Impulse);
+            bullet.GetComponent<Rigidbody>().AddForce((new Vector3(cursorPosition.x, firePoint.position.y, cursorPosition.y) - firePoint.position).normalized * fireForce, ForceMode.Impulse);
         }
     }
 }
