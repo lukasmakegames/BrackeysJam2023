@@ -23,7 +23,7 @@ RenderSettings:
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
-  m_AmbientIntensity: 1
+  m_AmbientIntensity: 0
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
@@ -18716,17 +18716,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 450008, guid: 9830f561f80768b4f92139c1c15bc835, type: 3}
   m_PrefabInstance: {fileID: 1861876421}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1877749737 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1877749737, guid: 5f051ffa1b0926147bb4a2281ff99e99, type: 3}
-  m_PrefabInstance: {fileID: 90334367874207728}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dabe1fab5ba6a0f48a62922c9f8dfd9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1878486433
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20692,10 +20681,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 90334369448318578, guid: 5f051ffa1b0926147bb4a2281ff99e99, type: 3}
-      propertyPath: weaponLukas
-      value: 
-      objectReference: {fileID: 1877749737}
-    - target: {fileID: 90334369448318578, guid: 5f051ffa1b0926147bb4a2281ff99e99, type: 3}
       propertyPath: playerCamera
       value: 
       objectReference: {fileID: 334792969}
@@ -20754,10 +20739,6 @@ PrefabInstance:
     - target: {fileID: 5469449454605009064, guid: 5f051ffa1b0926147bb4a2281ff99e99, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6792397187495862017, guid: 5f051ffa1b0926147bb4a2281ff99e99, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f051ffa1b0926147bb4a2281ff99e99, type: 3}
