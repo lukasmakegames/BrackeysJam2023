@@ -46,7 +46,7 @@ public class MovementLukas : MonoBehaviour
         }
 
         //Hide the cursor
-        Cursor.visible = false;
+        //Cursor.visible = false;
     }
 
     private void Update()

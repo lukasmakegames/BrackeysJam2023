@@ -10,7 +10,7 @@ public class LoaderTriger : MonoBehaviour
     public Button loadNextScene;
     public GameObject textForPlayer;
 
-    public int scoreForLoadNewScene = 50;
+    public int scoreForLoadNewScene = 100;
 
     public void LoadNextScene()
     {

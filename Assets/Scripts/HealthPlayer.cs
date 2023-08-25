@@ -17,12 +17,12 @@ public class HealthPlayer : Health
         currentHealth = Mathf.Clamp(currentHealth, 0f, maxHealth);
 
         EventAgregator.playerLostHP.Invoke(damageAmount);
-        // Update the health bar UI
-        HealthBar healthBar = GetComponentInChildren<HealthBar>();
-        if (healthBar != null)
-        {
-            healthBar.UpdateHealthBar(currentHealth);
-        }
+        //// Update the health bar UI
+        //HealthBar healthBar = GetComponentInChildren<HealthBar>();
+        //if (healthBar != null)
+        //{
+        //    healthBar.UpdateHealthBar(currentHealth);
+        //}
 
         if (currentHealth <= 0f)
         {

@@ -18,21 +18,19 @@ public class PlayerUI : MonoBehaviour
 
     private void UpdateUI()
     {
-        playerHP.text = _player.HP.ToString();
-        playerScore.text = Player.ScoreOfLevel.ToString();
-        playerBullets.text = _player.Bullets.ToString();
-        playerGlobalScore.text = Player.GlobalScore.ToString();
-        playerInvestigationPoints.text = _player.FragmentsOfRune.ToString();
+        playerHP.text = "HP:" + _player.HP.ToString();
+        playerScore.text = "SCORE:" + Player.ScoreOfLevel.ToString();
+        playerBullets.text = "BULLETS:" + _player.Bullets.ToString();
+        playerGlobalScore.text = "GLOBAL SCORE:" + Player.GlobalScore.ToString();
+        playerInvestigationPoints.text = "RUNE POINTS:" + _player.FragmentsOfRune.ToString();
     }
 
     void Start()
     {
         _player = FindObjectOfType<Player>();
 
-        playerHP.text = _player.HP.ToString();
-        playerScore.text = Player.ScoreOfLevel.ToString();
-        playerBullets.text = _player.Bullets.ToString();
-        playerGlobalScore.text = Player.GlobalScore.ToString();
-        playerInvestigationPoints.text = _player.FragmentsOfRune.ToString();
+
+
+        UpdateUI();
     }
 }

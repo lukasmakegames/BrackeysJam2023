@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4451444575303084364}
   - component: {fileID: 4404680364327122468}
   - component: {fileID: 6916381757004933946}
+  - component: {fileID: 1168524470460598584}
   m_Layer: 0
   m_Name: HealPackage 1
   m_TagString: Untagged
@@ -95,7 +96,7 @@ MeshCollider:
   m_GameObject: {fileID: 4404680364326983166}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 1
   m_CookingOptions: 30
@@ -127,3 +128,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationAxis: {x: 0, y: 1, z: 0}
   rotationSpeed: 100
+--- !u!65 &1168524470460598584
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4404680364326983166}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.8640852, y: 0.53529876, z: 1.2948289}
+  m_Center: {x: -0.02254343, y: 0.26764938, z: -0.05487752}
