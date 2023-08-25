@@ -7,18 +7,20 @@ using UnityEngine.UI;
 public class DiveDeeper : MonoBehaviour
 {
     public Slider diveDeeperSliderValue;
-
+    public float maxDeeperOnLevel = 100f;
     private float _diveDeeperValue;
 
     public float DiveDeeperValue => _diveDeeperValue;
 
     private string _scene;
 
+    private Player _player;
     void Start()
     {
         _scene = SceneManager.GetActiveScene().name;
-        diveDeeperSliderValue.maxValue = 100;
-        CheckDeep();
+        _player = FindObjectOfType<Player>();
+        diveDeeperSliderValue.maxValue = maxDeeperOnLevel;
+        EventAgregator.updateUI.AddListener(UpdateDiveDeep);
     }
 
     private void CheckDeep()
@@ -45,5 +47,10 @@ public class DiveDeeper : MonoBehaviour
         }
 
         diveDeeperSliderValue.value = _diveDeeperValue;
+    }
+
+    private void UpdateDiveDeep()
+    {
+        diveDeeperSliderValue.value = _player.FragmentsOfRune;
     }
 }

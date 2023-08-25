@@ -5,7 +5,6 @@ using UnityEngine;
 public class BulletPackageTest : MonoBehaviour
 {
     public int bulletCount = 5;
-    public int score = 100;
     private Player _player;
     private void Start()
     {
@@ -17,7 +16,6 @@ public class BulletPackageTest : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             _player.AddBullets(bulletCount);
-            _player.AddScore(score);
             EventAgregator.updateBullet.Invoke();
             Destroy(this.gameObject);
         }

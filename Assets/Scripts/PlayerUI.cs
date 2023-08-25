@@ -7,6 +7,7 @@ public class PlayerUI : MonoBehaviour
     public TextMeshProUGUI playerScore;
     public TextMeshProUGUI playerGlobalScore;
     public TextMeshProUGUI playerBullets;
+    public TextMeshProUGUI playerInvestigationPoints;
 
     private Player _player;
 
@@ -21,6 +22,7 @@ public class PlayerUI : MonoBehaviour
         playerScore.text = Player.ScoreOfLevel.ToString();
         playerBullets.text = _player.Bullets.ToString();
         playerGlobalScore.text = Player.GlobalScore.ToString();
+        playerInvestigationPoints.text = _player.FragmentsOfRune.ToString();
     }
 
     void Start()
@@ -31,5 +33,6 @@ public class PlayerUI : MonoBehaviour
         playerScore.text = Player.ScoreOfLevel.ToString();
         playerBullets.text = _player.Bullets.ToString();
         playerGlobalScore.text = Player.GlobalScore.ToString();
+        playerInvestigationPoints.text = _player.FragmentsOfRune.ToString();
     }
 }

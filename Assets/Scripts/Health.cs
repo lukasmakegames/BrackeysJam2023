@@ -4,6 +4,7 @@ public class Health : MonoBehaviour
 {
     public float maxHealth = 100f;
     public float currentHealth;
+    public int score = 50;
 
     private void Start()
     {
@@ -31,6 +32,7 @@ public class Health : MonoBehaviour
 
     private void Die()
     {
+        EventAgregator.updateScore.Invoke(score);
         // Implement death behavior here
         Destroy(gameObject);
     }

@@ -5,7 +5,6 @@ using UnityEngine;
 public class HealPackage : MonoBehaviour
 {
     public int healCount = 5;
-    public int score = 200;
 
     private Player _player;
     private void Start()
@@ -19,7 +18,6 @@ public class HealPackage : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             _player.AddHP(healCount);
-            _player.AddScore(score);
 
             Destroy(this.gameObject);
         }
