@@ -11,4 +11,5 @@ public class EventAgregator
     public static UnityEvent playerEndLevel = new UnityEvent();
     public static UnityEvent<int> updateScore = new UnityEvent<int>();
     public static UnityEvent playerDead = new UnityEvent();
+    public static UnityEvent<int> playerAddRune = new UnityEvent<int>();
 }

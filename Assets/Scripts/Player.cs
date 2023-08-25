@@ -5,12 +5,14 @@ public class Player : MonoBehaviour
     private float _HP;
     private int _bullets;
     private static int _scoreOfLevel;
+    private static int _fragmentsOfRune;
     private static int _globalScore;
 
     public float HP => _HP;
     public int Bullets => _bullets;
     public static int ScoreOfLevel => _scoreOfLevel;
     public static int GlobalScore => _globalScore;
+    public int FragmentsOfRune => _fragmentsOfRune;
 
     private string scoreGlobalKey = "scoreGlobalKey";
 
@@ -22,6 +24,7 @@ public class Player : MonoBehaviour
         EventAgregator.playerDoShot.AddListener(ShotBullet);
         EventAgregator.updateScore.AddListener(UpdateScore);
         EventAgregator.playerEndLevel.AddListener(SaveScore);
+        EventAgregator.playerAddRune.AddListener(AddFragmentsOfRune);
         LoadGlobalScore();
     }
 
@@ -87,6 +90,12 @@ public class Player : MonoBehaviour
     public void AddScore(int score)
     {
         _scoreOfLevel += score;
+        EventAgregator.updateUI.Invoke();
+    }
+
+    public void AddFragmentsOfRune(int score)
+    {
+        _fragmentsOfRune += score;
         EventAgregator.updateUI.Invoke();
     }
 }
