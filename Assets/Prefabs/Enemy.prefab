@@ -431,6 +431,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   currentHealth: 100
+  score: 50
 --- !u!114 &8352702694946237906
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -711,7 +712,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4481599102455668353}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.00000035390258, y: -0.00000031621312, z: 0.78124994}
+  m_LocalPosition: {x: -0.00000053267286, y: -0.00000043710315, z: 1.09375}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

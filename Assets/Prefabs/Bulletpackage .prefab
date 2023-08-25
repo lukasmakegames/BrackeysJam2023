@@ -111,6 +111,7 @@ GameObject:
   - component: {fileID: 7497407872786912974}
   - component: {fileID: 7559798860405419570}
   - component: {fileID: 7497407872784738106}
+  - component: {fileID: 7543366204435259970}
   m_Layer: 0
   m_Name: 'Bulletpackage '
   m_TagString: Untagged
@@ -211,4 +212,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletCount: 4
-  score: 50
+--- !u!114 &7543366204435259970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7497407872784805826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 537f857b505d80b408c6b8c170287413, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationAxis: {x: 0, y: 1, z: 0}
+  rotationSpeed: 100

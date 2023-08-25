@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4404680364329041178}
   - component: {fileID: 4451444575303084364}
   - component: {fileID: 4404680364327122468}
+  - component: {fileID: 6916381757004933946}
   m_Layer: 0
   m_Name: HealPackage 1
   m_TagString: Untagged
@@ -112,4 +113,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healCount: 2
-  score: 50
+--- !u!114 &6916381757004933946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4404680364326983166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 537f857b505d80b408c6b8c170287413, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationAxis: {x: 0, y: 1, z: 0}
+  rotationSpeed: 100
