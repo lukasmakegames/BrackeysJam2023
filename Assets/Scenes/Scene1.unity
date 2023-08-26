@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 23800000, guid: 6f90247c35e395646bf0765849416747, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 7ec91d27f44033e4881ba71a7046ed59, type: 2}
 --- !u!1001 &133670
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5311,6 +5311,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: '[AudioManager]'
       objectReference: {fileID: 0}
+    - target: {fileID: 3131883734777764879, guid: 62515740df0ca214e845076110bceba7, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 8700d648ad013b740b79a6b81442cc7c, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62515740df0ca214e845076110bceba7, type: 3}
 --- !u!1001 &505281405
@@ -15431,6 +15435,10 @@ PrefabInstance:
     - target: {fileID: 3083545735333650838, guid: c06f0e07d37425745a09d55808f49560, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3083545735333650839, guid: c06f0e07d37425745a09d55808f49560, type: 3}
+      propertyPath: nextScene
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3083545735333650839, guid: c06f0e07d37425745a09d55808f49560, type: 3}
       propertyPath: loadNextScene
