@@ -15,6 +15,7 @@ public class LoaderTriger : MonoBehaviour
     public void LoadNextScene()
     {
         EventAgregator.playerEndLevel.Invoke();
+        EventAgregator.saveHP.Invoke();
         SceneManager.LoadScene(nextScene.ToString());
     }
 

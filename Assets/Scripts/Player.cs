@@ -18,13 +18,15 @@ public class Player : MonoBehaviour
 
     private void Awake()
     {
-        _HP = 100;
+        LoadHP();
         _scoreOfLevel = 0;
+        _fragmentsOfRune = 0;
         EventAgregator.playerLostHP.AddListener(UpdateHP);
         EventAgregator.playerDoShot.AddListener(ShotBullet);
         EventAgregator.updateScore.AddListener(UpdateScore);
         EventAgregator.playerEndLevel.AddListener(SaveScore);
         EventAgregator.playerAddRune.AddListener(AddFragmentsOfRune);
+        EventAgregator.saveHP.AddListener(SaveHP);
         LoadGlobalScore();
     }
 
@@ -97,5 +99,16 @@ public class Player : MonoBehaviour
     {
         _fragmentsOfRune += score;
         EventAgregator.updateUI.Invoke();
+    }
+
+    public void SaveHP() {
+        PlayerPrefs.SetFloat("PlayerHP", _HP);
+    }
+    public void LoadHP()
+    {
+            _HP = PlayerPrefs.GetFloat("PlayerHP");
+            if(_HP  == 0){
+                        _HP = 100;
+            }
     }
 }

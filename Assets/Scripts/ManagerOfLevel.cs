@@ -48,4 +48,9 @@ public class ManagerOfLevel : MonoBehaviour
     {
         PlayerPrefs.SetInt("scoreGlobalKey", 0);
     }
+
+    public void ResetHP() // This method need add when startGame
+    {
+        PlayerPrefs.SetFloat("PlayerHP", 100);
+    }
 }
