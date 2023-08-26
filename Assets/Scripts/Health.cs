@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
@@ -6,6 +7,7 @@ public class Health : MonoBehaviour
     public float currentHealth;
     public int score = 50;
 
+    public bool isBoss = false;
     private void Start()
     {
         currentHealth = maxHealth;
@@ -33,6 +35,10 @@ public class Health : MonoBehaviour
     private void Die()
     {
         EventAgregator.updateScore.Invoke(score);
+        if (isBoss)
+        {
+            SceneManager.LoadScene("WinScene");
+        }
         // Implement death behavior here
         Destroy(gameObject);
     }

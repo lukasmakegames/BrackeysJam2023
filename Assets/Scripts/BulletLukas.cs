@@ -5,9 +5,11 @@ using UnityEngine;
 public class BulletLukas : MonoBehaviour
 {
     public GameObject hitEffect;
+
+    public bool isEnemyBullet = true;
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag("Enemy") && !isEnemyBullet)
         {
             Health healthComponent = collision.gameObject.GetComponentInParent<Health>();
             if (healthComponent != null)
@@ -16,7 +18,7 @@ public class BulletLukas : MonoBehaviour
                 Instantiate(hitEffect, collision.transform.position, Quaternion.identity);
             }
         }
-        else if (collision.gameObject.CompareTag("Player"))
+        else if (collision.gameObject.CompareTag("Player") && isEnemyBullet)
         {
             Health healthComponent = collision.gameObject.GetComponentInParent<Health>();
             if (healthComponent != null)

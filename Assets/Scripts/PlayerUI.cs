@@ -22,7 +22,7 @@ public class PlayerUI : MonoBehaviour
         playerScore.text = "SCORE:" + Player.ScoreOfLevel.ToString();
         playerBullets.text = "BULLETS:" + _player.Bullets.ToString();
         playerGlobalScore.text = "GLOBAL SCORE:" + Player.GlobalScore.ToString();
-        playerInvestigationPoints.text = "RUNE POINTS:" + _player.FragmentsOfRune.ToString();
+        playerInvestigationPoints.text = "RUNE POINTS:" + Player.FragmentsOfRune.ToString();
     }
 
     void Start()

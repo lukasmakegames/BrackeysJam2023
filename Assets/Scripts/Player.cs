@@ -12,7 +12,7 @@ public class Player : MonoBehaviour
     public int Bullets => _bullets;
     public static int ScoreOfLevel => _scoreOfLevel;
     public static int GlobalScore => _globalScore;
-    public int FragmentsOfRune => _fragmentsOfRune;
+    public static int FragmentsOfRune => _fragmentsOfRune;
 
     private string scoreGlobalKey = "scoreGlobalKey";
 

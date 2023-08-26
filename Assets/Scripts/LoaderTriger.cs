@@ -29,7 +29,7 @@ public class LoaderTriger : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            if (Player.ScoreOfLevel < scoreForLoadNewScene)
+            if (Player.FragmentsOfRune < scoreForLoadNewScene)
             {
                 textForPlayer.SetActive(true);
             }

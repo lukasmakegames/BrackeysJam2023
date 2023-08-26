@@ -51,6 +51,6 @@ public class DiveDeeper : MonoBehaviour
 
     private void UpdateDiveDeep()
     {
-        diveDeeperSliderValue.value = _player.FragmentsOfRune;
+        diveDeeperSliderValue.value = Player.FragmentsOfRune;
     }
 }
